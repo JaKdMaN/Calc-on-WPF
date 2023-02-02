@@ -21,11 +21,11 @@
             <ColumnDefinition Width="60*"/>
         </Grid.ColumnDefinitions>
         <TextBox x:Name="tBox1" IsReadOnly="true" TextAlignment="Right" Text="0" Grid.ColumnSpan="6" Height="23" Margin="10,11,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Button x:Name="btnMC" Content="MC" Margin="10,5,10,9" Grid.Row="1"/>
-        <Button x:Name="btnMR" Content="MR" Grid.Column="1" Margin="10,5,10,9" Grid.Row="1"/>
-        <Button x:Name="btnP2" Content="M+" Grid.Column="2" Margin="10,5,9,9" Grid.Row="1"/>
-        <Button x:Name="btnMM" Content="M-" Grid.Column="3" Margin="10,5,10,9" RenderTransformOrigin="1.002,0.317" Grid.Row="1"/>
-        <Button x:Name="btnMS" Content="MS" Grid.Column="4" Margin="10,5,10,9" Grid.Row="1"/>
+        <Button x:Name="btnMC" Content="MC" Margin="10,5,10,9" Grid.Row="1" Click="SetMemory"/>
+        <Button x:Name="btnMR" Content="MR" Grid.Column="1" Margin="10,5,10,9" Grid.Row="1" Click="SetMemory"/>
+        <Button x:Name="btnP2" Content="M+" Grid.Column="2" Margin="10,5,9,9" Grid.Row="1" Click="SetMemory"/>
+        <Button x:Name="btnMM" Content="M-" Grid.Column="3" Margin="10,5,10,9" RenderTransformOrigin="1.002,0.317" Grid.Row="1" Click="SetMemory"/>
+        <Button x:Name="btnMS" Content="MS" Grid.Column="4" Margin="10,5,10,9" Grid.Row="1" Click="SetMemory"/>
         <Button x:Name="btnStr" Content="&lt;---" Grid.Column="5" Margin="10,5,10,9" Grid.Row="1" Click="btnStr_Click"/>
         <Grid Margin="10,16,1,0" Grid.ColumnSpan="6" Grid.Row="2">
             <Grid.RowDefinitions>
@@ -41,9 +41,9 @@
                 <ColumnDefinition Width="83*"/>
                 <ColumnDefinition Width="83*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="btn1X" Content="1/x" Margin="10,10,13,6" Width="62" Height="55"/>
-            <Button x:Name="btnCE" Content="CE" Margin="10,10,12,6" Grid.Column="1" Width="62" Height="55"/>
-            <Button x:Name="btnC" Content="C" Grid.Column="2" Margin="10,10,11,6" Width="62" Height="55"/>
+            <Button x:Name="btn1X" Content="1/x" Margin="10,10,13,6" Width="62" Height="55" Click="btn1X_Click"/>
+            <Button x:Name="btnCE" Content="CE" Margin="10,10,12,6" Grid.Column="1" Width="62" Height="55" Click="btnCE_Click"/>
+            <Button x:Name="btnC" Content="C" Grid.Column="2" Margin="10,10,11,6" Width="62" Height="55" Click="btnC_Click"/>
             <Button x:Name="btnD" Content="/" Grid.Column="3" Margin="10,10,11,6" Width="62" Height="55" Click="SetOperation"/>
             <Button x:Name="btn7" Content="7" Margin="10,10,13,7" Grid.Row="1" Width="62" Height="55" Click="Buttons"/>
             <Button x:Name="btn8" Content="8" Grid.Column="1" Margin="10,10,12,7" Grid.Row="1" Width="62" Height="55" Click="Buttons"/>

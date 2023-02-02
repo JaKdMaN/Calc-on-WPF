@@ -20,6 +20,8 @@ namespace WpfApp5
     /// </summary>
     public partial class MainWindow : Window
     {
+        double memory = 0.0;
+        string memoryOption = null;
         string operation = null;
         double temp = 0.0;
         bool zpt = false;
@@ -41,6 +43,40 @@ namespace WpfApp5
             temp = Convert.ToDouble(tBox1.Text);
             tBox1.Text = "0";
             zpt = false;
+        }
+
+        private void SetMemory(object sender, RoutedEventArgs e)
+        {
+            memoryOption = ((Button)sender).Content.ToString();
+
+            switch (memoryOption)
+            {
+                case "MC":
+                    {
+                        memory = 0.0;
+                        break;
+                    }
+                case "MR":
+                    {
+                        tBox1.Text = memory.ToString();
+                        break;
+                    }
+                case "M+":
+                    {
+                        memory += Convert.ToDouble(tBox1.Text);
+                        break;
+                    }
+                case "M-":
+                    {
+                        memory -= Convert.ToDouble(tBox1.Text);
+                        break;
+                    }
+                case "MS":
+                    {
+                        memory = Convert.ToDouble(tBox1.Text);
+                        break;
+                    }
+            }
         }
 
         private void btnR_Click(object sender, RoutedEventArgs e)
@@ -95,6 +131,22 @@ namespace WpfApp5
             }
             else
                 tBox1.Text = "0";
+        }
+
+        private void btnC_Click(object sender, RoutedEventArgs e)
+        {
+            temp = 0.0;
+            tBox1.Text = "0";
+        }
+
+        private void btnCE_Click(object sender, RoutedEventArgs e)
+        {
+            tBox1.Text = "0";
+        }
+
+        private void btn1X_Click(object sender, RoutedEventArgs e)
+        {
+            tBox1.Text = (1 / Convert.ToDouble(tBox1.Text)).ToString();
         }
     }
 }
